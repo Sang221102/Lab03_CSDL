@@ -1,6 +1,5 @@
 package com.example.demo.controller;
 
-
 import com.example.demo.Service.BookService;
 import com.example.demo.Service.CategoryService;
 import com.example.demo.entity.Book;
@@ -15,11 +14,12 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 @Controller
 @RequestMapping("/books")
-public class Bookcontroller {
+public class BookController {
     @Autowired
     private BookService bookService;
     @Autowired
     private CategoryService categoryService;
+
     @GetMapping
     public String showAllBooks(Model model){
         List<Book> books = bookService.getAllBooks();
